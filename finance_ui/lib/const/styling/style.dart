@@ -4,7 +4,7 @@ import 'package:finance_ui/const/styling/fonts.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Style {
-  static TextStyle titleStyle = TextStyle(
+  static TextStyle  titleStyle  = TextStyle(
     fontFamily: Fonts.FontName,
     color: AppColors.primaryColor,
     fontSize: 30.sp,
