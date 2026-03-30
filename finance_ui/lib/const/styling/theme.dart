@@ -7,7 +7,7 @@ class AppThemes{
  static final ThemeData lightTheme = ThemeData(
   primaryColor: AppColors.black,
 
-scaffoldBackgroundColor: AppColors.black,
+scaffoldBackgroundColor: AppColors.white,
  textTheme: TextTheme (
   displayLarge: TextStyle(
     fontFamily: Fonts.FontName,

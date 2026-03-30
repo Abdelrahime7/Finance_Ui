@@ -1,6 +1,6 @@
 import 'package:finance_ui/const/styling/theme.dart';
-import 'package:finance_ui/const/widgets/outlined_button.dart';
-import 'package:finance_ui/const/widgets/primary_button.dart';
+import 'package:finance_ui/const/widgets/custom_textfield.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -48,7 +48,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
  
-
+bool isPassword=false;
   @override
   Widget build(BuildContext context) {
    
@@ -64,7 +64,9 @@ class _MyHomePageState extends State<MyHomePage> {
        
        children: [
 const SizedBox(height: 20),
+ 
 
+ 
 
        ],
         
