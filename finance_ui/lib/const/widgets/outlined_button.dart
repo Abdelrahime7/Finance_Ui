@@ -30,7 +30,7 @@ final  void Function()  onPressed;
       )
       
      ), 
-      child: Text(text ??" ",style:  TextStyle(fontSize:fontSize??16.sp,color: textColor??Colors.blue)),
+      child: Text(text ??" ",style:  TextStyle(fontSize:fontSize??12.sp,color: textColor??Colors.blue)),
    );
 
 
