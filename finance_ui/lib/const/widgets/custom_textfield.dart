@@ -10,15 +10,16 @@ class CustomeTextField extends StatelessWidget {
  final Widget ?sufixIcon ;
  final bool ?ispassword;
  final  double ? width ; 
-
+ final double ? height ;
  
-  const CustomeTextField  ({super.key, this.hintText, this.sufixIcon, this.ispassword, this.width});
+  const CustomeTextField  ({super.key, this.hintText, this.sufixIcon, this.ispassword, this.width, this.height});
 
   @override
   Widget build(BuildContext context) {
     return 
     SizedBox(
       width:width ??331.w,
+      height: height ??50.h,
 
      child:  TextField(
       obscureText: ispassword??false,
