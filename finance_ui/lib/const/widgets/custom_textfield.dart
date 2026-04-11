@@ -11,8 +11,13 @@ class CustomeTextField extends StatelessWidget {
  final bool ?ispassword;
  final  double ? width ; 
  final double ? height ;
- 
-  const CustomeTextField  ({super.key, this.hintText, this.sufixIcon, this.ispassword, this.width, this.height});
+ final TextEditingController controller;
+ final String? Function(String?)? validator;
+
+  const CustomeTextField  ({super.key, this.hintText, 
+  this.sufixIcon, this.ispassword, this.width,
+   this.height, required this.controller , this.validator
+});
 
   @override
   Widget build(BuildContext context) {
@@ -20,13 +25,16 @@ class CustomeTextField extends StatelessWidget {
     SizedBox(
       width:width ??331.w,
       height: height ??50.h,
+      
 
-     child:  TextField(
+     child:  TextFormField(
+      controller: controller,
+      validator: validator,
+
       obscureText: ispassword??false,
       cursorColor: AppColors.primaryColor,
       autofocus: false,
       
-
       decoration: InputDecoration(
       filled: true,
         fillColor: Color(0xffF7F8F9),
@@ -52,8 +60,12 @@ class CustomeTextField extends StatelessWidget {
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8.r),
           borderSide:  BorderSide(color:AppColors.primaryColor,width: 1)
-
-
+      
+    ),
+    errorBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(8.r), 
+      borderSide:  BorderSide(color:Colors.red,width: 1)
+      
     )
     )
      )
