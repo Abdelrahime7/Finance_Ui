@@ -2,11 +2,14 @@ import 'package:finance_ui/const/styling/colors.dart';
 import 'package:finance_ui/const/styling/fonts.dart';
 import 'package:finance_ui/const/widgets/custom_textfield.dart';
 import 'package:finance_ui/const/widgets/primary_button.dart';
+import 'package:finance_ui/core/routing/routes.dart';
 import 'package:finance_ui/features/auth/widgets/back_button.dart';
 import 'package:finance_ui/features/auth/widgets/or_Login.dart';
 import 'package:finance_ui/features/auth/widgets/social_options.dart';
+import 'package:finance_ui/features/auth/widgets/text_span.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 
 class LoginScreen extends StatefulWidget {
   
@@ -133,36 +136,19 @@ class _LoginScreenState extends State<LoginScreen> {
               },
               ),
                SizedBox(height:35.h),
-              OrLoginWith(),
+              OrLogin_Reg(text: "Or Login with"),
               SizedBox(height:22.h),
               SocialOptions(),
                SizedBox(height:155.h),
-               Center(
-                 child: RichText(
-                  text: TextSpan(
-                   text: "Don't have an account?",
-                   style: TextStyle(
-                     fontFamily: Fonts.FontName,
-                           color: AppColors.grey,
-                          fontSize: 14.sp,
-                           fontWeight: FontWeight.w500,
-                               ),
-                   children: [
-                    TextSpan(
-                 
-                      text: "Register now",
-                      style: TextStyle(
-                     fontFamily: Fonts.FontName,
-                           color: AppColors.primaryColor,
-                          fontSize: 14.sp,
-                           fontWeight: FontWeight.bold,
-                               ),
-                   )
-                   ]
-                 )
-                 ),
-               )
-        
+            
+            BottomTextSpan(
+              firstText: "Don't have an account?",
+              secondText: "Register",
+              onTap: ()=>{
+                GoRouter.of(context).push(AppRoutes.register)
+              }
+              ,
+            )
           ] 
         ),
       ),

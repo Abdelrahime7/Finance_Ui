@@ -4,8 +4,10 @@ import 'package:finance_ui/const/styling/fonts.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class  OrLoginWith extends StatelessWidget {
-  const OrLoginWith({super.key});
+class  OrLogin_Reg extends StatelessWidget {
+  final String text;
+  
+  const OrLogin_Reg({super.key , required this.text});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +24,7 @@ return  Row(
                   SizedBox(
                 width: 111.w,
                 
-                child:Text("Or Login with"
+                child:Text(text
             ,
                 style:  TextStyle(
                       fontFamily: Fonts.FontName,
