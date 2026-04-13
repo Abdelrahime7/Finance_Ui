@@ -1,6 +1,7 @@
 import 'package:finance_ui/const/styling/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 
 
 class AppBackButton extends StatelessWidget {
@@ -23,12 +24,16 @@ class AppBackButton extends StatelessWidget {
              border: Border.all(color:Color(0xffE8ECF4),width: 2),
              borderRadius: BorderRadius.circular(8.r),
             ),
-            child: Icon(
-            Icons.arrow_back_ios_new,
+            child: IconButton(
+              onPressed: ()=>{
+                GoRouter.of(context).pop()
+              },
+           icon: Icon(Icons.arrow_back_ios_new,
             color: AppColors.primaryColor,
             size: 17.sp,
           
             ),
+            )
           ),
        );
      
