@@ -2,6 +2,7 @@
 
 import 'package:finance_ui/core/routing/routes.dart';
 import 'package:finance_ui/features/auth/auth_screen.dart';
+import 'package:finance_ui/features/auth/new_pass.dart';
 import 'package:finance_ui/features/forgot_pass.dart';
 import 'package:finance_ui/features/onBoard/onboard_screen.dart';
 import 'package:finance_ui/features/register/register_screem.dart';
@@ -23,6 +24,9 @@ class AppRouterConfig {
 
      GoRoute(path: AppRoutes.forgotPassword,
      builder: (context, state) => const ForgetPasswordScreen()),
+
+      GoRoute(path: AppRoutes.createPasswoord,
+     builder: (context, state) => const CreatePassScreen()),
 
 
   ]
