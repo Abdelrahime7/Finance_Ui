@@ -34,7 +34,7 @@ class OnboardScreen extends StatelessWidget {
               ),
               SizedBox(height: 15.h),
               PrimaryOutlinedButton(
-                onPressed: () => GoRouter.of(context).push(AppRoutes.register),
+                onPressed: () => GoRouter.of(context).push(AppRoutes.passwoordChanged),
                 text: "Register",
               ),
               SizedBox(height: 46.h),

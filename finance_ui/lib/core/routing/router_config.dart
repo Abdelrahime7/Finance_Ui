@@ -3,7 +3,8 @@
 import 'package:finance_ui/core/routing/routes.dart';
 import 'package:finance_ui/features/auth/auth_screen.dart';
 import 'package:finance_ui/features/auth/new_pass.dart';
-import 'package:finance_ui/features/forgot_pass.dart';
+import 'package:finance_ui/features/auth/forgot_pass.dart';
+import 'package:finance_ui/features/auth/password_Changed.dart';
 import 'package:finance_ui/features/onBoard/onboard_screen.dart';
 import 'package:finance_ui/features/register/register_screem.dart';
 import 'package:go_router/go_router.dart';
@@ -27,6 +28,10 @@ class AppRouterConfig {
 
       GoRoute(path: AppRoutes.createPasswoord,
      builder: (context, state) => const CreatePassScreen()),
+
+     GoRoute(path: AppRoutes.passwoordChanged,
+     builder: (context ,state)=>const PasswordChangedScreen()
+     )
 
 
   ]
