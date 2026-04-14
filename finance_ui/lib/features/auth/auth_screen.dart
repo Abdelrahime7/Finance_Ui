@@ -137,7 +137,7 @@ class _LoginScreenState extends State<LoginScreen> {
               onPressed: ()=>{
                 if(_formKey.currentState!.validate())
                 { 
-                 
+                 GoRouter.of(context).push(AppRoutes.otpVerefication)
                 }
                
               },
