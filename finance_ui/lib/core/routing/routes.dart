@@ -8,6 +8,10 @@ class AppRoutes
   static const String createPasswoord='/createPassword';
   static const String passwoordChanged='/passwoordChanged';
   static const String otpVerefication='/otpVerefication';
+  static const String mainScreen='/mainScreen';
+  static const String gen='/gen';
+
+
 
 
 
