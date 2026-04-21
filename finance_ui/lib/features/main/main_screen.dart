@@ -2,6 +2,7 @@
  import 'package:finance_ui/const/widgets/botom_nav_bar.dart';
 import 'package:finance_ui/features/home/home_screen.dart';
 import 'package:finance_ui/features/myCard/my_card_screen.dart';
+import 'package:finance_ui/features/myProfil/profil_screen.dart';
 import 'package:flutter/material.dart';
 
 class MainScreen extends StatefulWidget {
@@ -17,6 +18,8 @@ class _MainScreenState extends State<MainScreen> {
 
 final List<Widget> _screens = [
   const  HomeScreen(),
+   const MycardsScreen (),
+ 
   Container(
     color: Colors.blue,
     width: double.infinity,
@@ -28,13 +31,8 @@ final List<Widget> _screens = [
     height: double.infinity, 
 
   ),
-  const MycardsScreen (),
  
-  Container(
-    color: Colors.green,
-    width: double.infinity,
-    height: double.infinity,
-  ),
+const ProfilScreen()
 ];
 
  void Function(int)? onTap(int value){

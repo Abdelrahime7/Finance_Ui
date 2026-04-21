@@ -6,14 +6,9 @@ import 'package:finance_ui/features/home/widgets/card_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class MycardsScreen extends StatefulWidget {
+class MycardsScreen extends StatelessWidget {
   const MycardsScreen({super.key});
 
-  @override
-  State<MycardsScreen> createState() => _MycardsScreenState();
-}
-
-class _MycardsScreenState extends State<MycardsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
