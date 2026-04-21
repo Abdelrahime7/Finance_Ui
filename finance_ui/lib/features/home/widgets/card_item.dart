@@ -7,27 +7,28 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
  
 class CreditCardItem extends StatelessWidget   {
   final String? cardName;
+  final double? cardWidth;
   final String? balance ;
   final String? serialNumber;
   final String? date;
   final Color? color;
+  final double? cardHeight;
+
   const CreditCardItem({super.key, this.cardName , this.balance,
-   this.serialNumber, this.date, this.color});
+   this.serialNumber, this.date, this.color, this.cardWidth, this.cardHeight});
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-       Container(
-        width: 207.w,
-      
-        decoration: BoxDecoration(
-          color: color?? AppColors.primaryColor,
-          borderRadius: BorderRadius.circular(16.r)
-      
-        ),
-        
+    return Container(
+      width: cardWidth ?? 207.w,
+      height: cardHeight ?? 220.h,
+      decoration: BoxDecoration(
+        color: color ?? AppColors.primaryColor,
+        borderRadius: BorderRadius.circular(16.r),
       ),
+      clipBehavior: Clip.antiAlias,
+      child: Stack(
+        children: [
       Positioned
       (
      bottom:0 ,
@@ -35,8 +36,8 @@ class CreditCardItem extends StatelessWidget   {
 
         child:Image.asset(
         AppAssest.layer2, 
-        width:210 ,
-        height:190 ,
+        width: 210.w,
+        height: 190.h,
         fit: BoxFit.fill,
         
       ),
@@ -48,8 +49,8 @@ class CreditCardItem extends StatelessWidget   {
 
         child:Image.asset(
         AppAssest.layer2, 
-        width:210 ,
-        height:190 ,
+        width: 210.w,
+        height: 190.h,
           fit: BoxFit.fill,
         
       ),
@@ -61,8 +62,8 @@ class CreditCardItem extends StatelessWidget   {
 
         child:Image.asset(
         AppAssest.layer1, 
-        width:140 ,
-        height:130 ,
+        width: 140.w,
+        height: 130.h,
           fit: BoxFit.fill,
         
       ),
@@ -70,20 +71,36 @@ class CreditCardItem extends StatelessWidget   {
       Positioned(
        left: 24.w,
        top: 24.h,
-
+       right: 24.w,
         
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
             children: [
-              Text(cardName??"X-Card",
-              style: TextStyle(
-                fontFamily: Fonts.FontName,
-                color: AppColors.white,
-                fontSize: 12.sp,
-                 fontWeight: FontWeight.bold,
-                
-              )
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(cardName??"X-Card",
+                  style: TextStyle(
+                    fontFamily: Fonts.FontName,
+                    color: AppColors.white,
+                    fontSize: 12.sp,
+                     fontWeight: FontWeight.bold,
+                    
+                  )
+                  ),
+                 
+                  Text("visa",
+                  style: TextStyle(
+                    fontFamily: Fonts.FontName,
+                    color: AppColors.white,
+                    fontSize: 12.sp,
+                     fontWeight: FontWeight.bold,
+                    
+                  )
+                  ),
+
+                ],
               ),
                SizedBox(height:57.h),
               Text("Balance",
@@ -130,9 +147,8 @@ class CreditCardItem extends StatelessWidget   {
           
           ),
         ),
-      
-     
-      ]
+        ],
+      ),
     );
   }
 

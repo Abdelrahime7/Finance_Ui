@@ -33,9 +33,9 @@ Column(
       }
       ),
       items: [
-        Flexible(child: CreditCardItem()),
-        Flexible(child: CreditCardItem()),
-        Flexible(child: CreditCardItem()),
+       CreditCardItem(),
+      CreditCardItem(),
+       CreditCardItem()
       ]
       
      
